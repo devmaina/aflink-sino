@@ -20,11 +20,20 @@
         nav { background: var(--primary-color); padding: 15px; color: white; display: flex; justify-content: space-between; }
         nav a { color: white; text-decoration: none; margin: 0 15px; }
         .hero { padding: 50px; background: var(--secondary-color); color: white; }
-        .categories, .pricing, .partnership { padding: 50px 0; }
-        .category-item { display: inline-block; width: 200px; padding: 20px; margin: 10px; background: #fff3e0; border-radius: 8px; }
+        .categories, .partnership { padding: 50px 0; }
+        .category-item {
+            display: inline-block; width: 200px; padding: 20px; margin: 10px; background: #fff3e0; border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+        .category-item:hover { transform: scale(1.1); }
+        .pricing { padding: 50px 0; background: #f1f1f1; }
+        .pricing-text { font-size: 1.2em; margin-bottom: 30px; }
         .pricing-table { display: flex; justify-content: center; flex-wrap: wrap; }
-        .pricing-card { border: 1px solid #ddd; padding: 20px; margin: 10px; width: 250px; }
+        .pricing-card { border: 1px solid #ddd; padding: 20px; margin: 10px; width: 250px; text-align: center; background: #fff; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease; }
+        .pricing-card:hover { transform: scale(1.05); }
         .cta { background: var(--accent-color); padding: 20px; color: white; }
+        .pricing-card h3 { font-size: 1.5em; margin-bottom: 10px; }
+        footer { background: var(--primary-color); color: white; padding: 10px 0; }
     </style>
 </head>
 <body>
@@ -37,10 +46,12 @@
             <a href="#contact">Contact</a>
         </div>
     </nav>
+
     <section class="hero">
         <h1>Connecting Africa with China's Best Manufacturers</h1>
         <p>Fast, reliable, and affordable trade solutions for businesses and consumers.</p>
     </section>
+
     <section class="categories" id="categories">
         <h2>Top Product Categories</h2>
         <div class="category-item"><i class="material-icons">home</i> Household Goods</div>
@@ -51,22 +62,39 @@
         <div class="category-item"><i class="material-icons">kitchen</i> Kitchen Appliances</div>
         <div class="category-item"><i class="material-icons">laptop</i> Electronics</div>
         <div class="category-item"><i class="material-icons">shopping_cart</i> Consumer Goods</div>
+        <div class="category-item"><i class="material-icons">toys</i> Toys & Games</div>
+        <div class="category-item"><i class="material-icons">airplane_ticket</i> Travel Accessories</div>
     </section>
+
     <section class="pricing" id="pricing">
-        <h2>Pricing Plans for Sellers</h2>
+        <h2>Pricing for Sellers</h2>
+        <p class="pricing-text">Post your goods for free if the value is less than $50. For goods above $50, a 0.5% commission is charged on the total value per month.</p>
         <div class="pricing-table">
-            <div class="pricing-card"> <h3>Basic Listing</h3> <p>$4.99/month</p> </div>
-            <div class="pricing-card"> <h3>Premium Listing</h3> <p>$9.99/month</p> </div>
-            <div class="pricing-card"> <h3>Boosted Ads</h3> <p>$19.99/month</p> </div>
-            <div class="pricing-card"> <h3>Enterprise Solutions</h3> <p>Custom Pricing</p> </div>
+            <div class="pricing-card">
+                <h3>Free Listing</h3>
+                <p>Goods under $50</p>
+                <p>No commission</p>
+            </div>
+            <div class="pricing-card">
+                <h3>Standard Commission</h3>
+                <p>0.5% commission on goods above $50</p>
+                <p>Flexible rates</p>
+            </div>
+            <div class="pricing-card">
+                <h3>Custom Solutions</h3>
+                <p>For large volumes</p>
+                <p>Custom commission rates</p>
+            </div>
         </div>
     </section>
+
     <section class="partnership" id="contact">
         <h2>Partner with Us</h2>
         <p>We welcome logistics partners, investors, and manufacturers.</p>
         <button>Download App</button>
         <button>Book a Demo</button>
     </section>
+
     <footer>
         <p>&copy; 2025 AfLink-Sino. All rights reserved.</p>
     </footer>
